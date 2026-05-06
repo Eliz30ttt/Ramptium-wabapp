@@ -2,7 +2,7 @@ body {
   margin: 0;
   font-family: 'Inter', sans-serif;
   background: #0b0d11;
-  color: #ffffff;
+  color: #fff;
 }
 
 .app {
@@ -11,110 +11,109 @@ body {
   padding: 20px;
 }
 
-/* Topbar */
-.topbar {
+/* HEADER */
+.header {
+  margin-bottom: 20px;
+}
+
+.brand {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 30px;
 }
 
 .logo {
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  background: linear-gradient(145deg, #1c1f26, #0b0d11);
+  background: #151922;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 600;
 }
 
-.topbar h1 {
-  margin: 0;
-  font-size: 16px;
+/* CARDS */
+.card {
+  background: #121621;
+  padding: 16px;
+  border-radius: 14px;
+  margin-bottom: 12px;
+  border: 1px solid #1c2230;
 }
 
-.topbar span {
+.highlight {
+  background: linear-gradient(145deg, #121621, #0f131c);
+}
+
+.label {
+  color: #8a93a5;
   font-size: 12px;
-  color: #7a7f87;
+  margin-bottom: 6px;
 }
 
-/* Balance */
-.balance-card {
-  margin-bottom: 25px;
-}
-
-.balance-card p {
-  color: #7a7f87;
-  margin: 0;
-}
-
-.balance-card h2 {
-  font-size: 42px;
-  margin: 5px 0;
-  font-weight: 500;
-}
-
-.balance-card small {
-  color: #7a7f87;
-}
-
-/* Actions */
-.actions {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 25px;
-}
-
-button {
-  flex: 1;
-  padding: 12px;
-  background: #161a22;
+/* INPUT */
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
   border: none;
-  border-radius: 12px;
-  color: white;
-  font-size: 14px;
+  background: #0f131c;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+/* BUTTONS */
+button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background: #1b2230;
+  color: #fff;
   cursor: pointer;
-  transition: 0.2s;
 }
 
 button:hover {
-  background: #202530;
+  background: #242c3d;
 }
 
-/* Wallet */
-.wallet-card {
-  background: #11151b;
-  padding: 15px;
-  border-radius: 14px;
-  margin-bottom: 20px;
+/* ROW */
+.row {
+  display: flex;
+  gap: 10px;
 }
 
-.wallet-card p:first-child {
-  color: #7a7f87;
-  margin-bottom: 5px;
+.row button {
+  width: 100%;
 }
 
-/* Divider */
-.divider {
-  height: 1px;
-  background: #1a1f28;
-  margin: 20px 0;
+/* BALANCE */
+h2 {
+  margin: 0;
+  font-size: 34px;
 }
 
-/* Market */
-.market {
+/* TRANSACTIONS */
+.section {
+  margin-top: 15px;
+}
+
+.section h3 {
+  font-size: 14px;
+  color: #8a93a5;
+}
+
+.tx {
   display: flex;
   justify-content: space-between;
+  padding: 10px;
+  background: #121621;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  border: 1px solid #1c2230;
 }
 
-.market span {
-  color: #7a7f87;
-  font-size: 12px;
-}
-
-.market h3 {
-  margin: 5px 0 0;
-  font-size: 16px;
+.tx small {
+  color: #8a93a5;
 }
