@@ -1,71 +1,120 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #0f1115;
-  color: #fff;
+  font-family: 'Inter', sans-serif;
+  background: #0b0d11;
+  color: #ffffff;
 }
 
-.container {
-  padding: 20px;
-  max-width: 500px;
+.app {
+  max-width: 480px;
   margin: auto;
+  padding: 20px;
 }
 
-.header {
-  text-align: center;
-  margin-bottom: 20px;
+/* Topbar */
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 30px;
 }
 
 .logo {
-  width: 80px;
-  height: 80px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
+  background: linear-gradient(145deg, #1c1f26, #0b0d11);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
 }
 
-.symbol {
-  color: #aaa;
-  margin-top: -10px;
+.topbar h1 {
+  margin: 0;
+  font-size: 16px;
 }
 
-.card {
-  background: #1a1d24;
-  padding: 20px;
-  border-radius: 16px;
-  margin-bottom: 15px;
-  text-align: center;
+.topbar span {
+  font-size: 12px;
+  color: #7a7f87;
 }
 
-.card p {
-  color: #aaa;
+/* Balance */
+.balance-card {
+  margin-bottom: 25px;
+}
+
+.balance-card p {
+  color: #7a7f87;
+  margin: 0;
+}
+
+.balance-card h2 {
+  font-size: 42px;
   margin: 5px 0;
+  font-weight: 500;
 }
 
-h2 {
-  font-size: 28px;
-  margin: 10px 0;
+.balance-card small {
+  color: #7a7f87;
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
 }
 
 button {
-  width: 100%;
+  flex: 1;
   padding: 12px;
-  margin-top: 10px;
+  background: #161a22;
   border: none;
-  border-radius: 10px;
-  background: #2d313a;
-  color: #fff;
-  font-size: 16px;
+  border-radius: 12px;
+  color: white;
+  font-size: 14px;
   cursor: pointer;
+  transition: 0.2s;
 }
 
 button:hover {
-  background: #3a3f4a;
+  background: #202530;
 }
 
-.stats {
+/* Wallet */
+.wallet-card {
+  background: #11151b;
+  padding: 15px;
+  border-radius: 14px;
+  margin-bottom: 20px;
+}
+
+.wallet-card p:first-child {
+  color: #7a7f87;
+  margin-bottom: 5px;
+}
+
+/* Divider */
+.divider {
+  height: 1px;
+  background: #1a1f28;
+  margin: 20px 0;
+}
+
+/* Market */
+.market {
   display: flex;
   justify-content: space-between;
 }
 
-.stats div {
-  flex: 1;
+.market span {
+  color: #7a7f87;
+  font-size: 12px;
+}
+
+.market h3 {
+  margin: 5px 0 0;
+  font-size: 16px;
 }
