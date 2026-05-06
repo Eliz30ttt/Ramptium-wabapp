@@ -3,65 +3,59 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ramptium</title>
+  <title>Ramptium Wallet</title>
 
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
-
-  <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="style.css"/>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
 <div class="app">
 
-  <!-- Top Bar -->
-  <div class="topbar">
-    <div class="logo">R</div>
-    <div>
-      <h1>Ramptium</h1>
-      <span>RMP</span>
+  <!-- Header -->
+  <div class="header">
+    <div class="brand">
+      <div class="logo">R</div>
+      <div>
+        <h1>Ramptium</h1>
+        <p>Watch Wallet</p>
+      </div>
     </div>
+  </div>
+
+  <!-- Wallet Input -->
+  <div class="card">
+    <p class="label">Wallet Address</p>
+    <input id="wallet" placeholder="0x..." />
+    <button onclick="loadWallet()">Watch Wallet</button>
   </div>
 
   <!-- Balance -->
-  <div class="balance-card">
-    <p>Total Balance</p>
+  <div class="card highlight">
+    <p class="label">Balance</p>
     <h2 id="balance">0.00</h2>
-    <small>RMP</small>
+    <span>RMP</span>
+  </div>
+
+  <!-- Account -->
+  <div class="card">
+    <p class="label">Account</p>
+    <p id="account">Not loaded</p>
   </div>
 
   <!-- Actions -->
-  <div class="actions">
-    <button onclick="sendToken()">Send</button>
-    <button onclick="receiveToken()">Receive</button>
+  <div class="row">
+    <button onclick="refresh()">Refresh</button>
+    <button onclick="copy()">Copy</button>
   </div>
 
-  <!-- Wallet -->
-  <div class="wallet-card">
-    <p>Account</p>
-    <p id="username">Loading...</p>
-  </div>
-
-  <!-- Divider -->
-  <div class="divider"></div>
-
-  <!-- Market -->
-  <div class="market">
-    <div>
-      <span>Price</span>
-      <h3>$0.001</h3>
-    </div>
-    <div>
-      <span>24h Volume</span>
-      <h3>$12.3K</h3>
-    </div>
-    <div>
-      <span>Holders</span>
-      <h3>1,245</h3>
-    </div>
+  <!-- Transactions -->
+  <div class="section">
+    <h3>Transactions</h3>
+    <div id="txs"></div>
   </div>
 
 </div>
