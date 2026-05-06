@@ -1,31 +1,46 @@
-// Initialize Telegram Web App
 const tg = window.Telegram.WebApp;
 tg.expand();
 
-// Load user info
+// Load user
 const user = tg.initDataUnsafe?.user;
 
 if (user) {
   document.getElementById("username").innerText =
-    `${user.first_name || ""} ${user.last_name || ""} (@${user.username || "user"})`;
+    `${user.first_name || ""} (@${user.username || "user"})`;
 } else {
-  document.getElementById("username").innerText = "Guest User";
+  document.getElementById("username").innerText = "Guest";
 }
 
-// Fake balance (replace later with blockchain)
-let balance = 1000;
+// Balance animation (subtle, premium feel)
+let value = 0;
+let target = 1250.00;
 
-function updateBalance() {
-  document.getElementById("balance").innerText = balance + " RMP";
+function animate() {
+  let step = setInterval(() => {
+    value += 25;
+    if (value >= target) {
+      value = target;
+      clearInterval(step);
+    }
+    document.getElementById("balance").innerText = value.toFixed(2);
+  }, 20);
 }
 
-updateBalance();
+animate();
 
-// Button actions
+// Actions
 function sendToken() {
-  alert("Send feature coming soon 🚀");
+  tg.showPopup({
+    title: "Send",
+    message: "Coming soon",
+    buttons: [{type: "ok"}]
+  });
 }
 
 function receiveToken() {
-  alert("Your wallet address will appear here soon 📥");
+  tg.showPopup({
+    title: "Receive",
+    message: "Coming soon",
+    buttons: [{type: "ok"}]
+  });
 }
