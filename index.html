@@ -3,56 +3,64 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ramptium (RMP)</title>
+  <title>Ramptium</title>
 
-  <!-- Telegram Web App SDK -->
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css"/>
 </head>
 
 <body>
 
-<div class="container">
+<div class="app">
 
-  <!-- Header -->
-  <div class="header">
-    <img src="https://via.placeholder.com/80" class="logo"/>
-    <h1>Ramptium</h1>
-    <p class="symbol">RMP</p>
+  <!-- Top Bar -->
+  <div class="topbar">
+    <div class="logo">R</div>
+    <div>
+      <h1>Ramptium</h1>
+      <span>RMP</span>
+    </div>
   </div>
 
-  <!-- Balance Card -->
-  <div class="card">
-    <p>Balance</p>
-    <h2 id="balance">0 RMP</h2>
-  </div>
-
-  <!-- Wallet Info -->
-  <div class="card">
-    <p>User</p>
-    <p id="username">Loading...</p>
+  <!-- Balance -->
+  <div class="balance-card">
+    <p>Total Balance</p>
+    <h2 id="balance">0.00</h2>
+    <small>RMP</small>
   </div>
 
   <!-- Actions -->
-  <div class="card">
+  <div class="actions">
     <button onclick="sendToken()">Send</button>
     <button onclick="receiveToken()">Receive</button>
   </div>
 
-  <!-- Stats -->
-  <div class="card stats">
+  <!-- Wallet -->
+  <div class="wallet-card">
+    <p>Account</p>
+    <p id="username">Loading...</p>
+  </div>
+
+  <!-- Divider -->
+  <div class="divider"></div>
+
+  <!-- Market -->
+  <div class="market">
     <div>
-      <p>Price</p>
+      <span>Price</span>
       <h3>$0.001</h3>
     </div>
     <div>
-      <p>Holders</p>
-      <h3>1,245</h3>
+      <span>24h Volume</span>
+      <h3>$12.3K</h3>
     </div>
     <div>
-      <p>Volume</p>
-      <h3>$12.3K</h3>
+      <span>Holders</span>
+      <h3>1,245</h3>
     </div>
   </div>
 
